@@ -13,7 +13,7 @@ class GosyanduApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: AppRoutes.start,
+      initialRoute: AppRoutes.welcome,
       routes: AppPages.routes,
     );
   }

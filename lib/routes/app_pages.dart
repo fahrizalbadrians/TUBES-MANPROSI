@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../pages/start_page.dart';
+//import '../pages/start_page.dart';
 import '../pages/welcome_page.dart';
 import '../pages/login_page.dart';
 import '../pages/register_page.dart';
@@ -16,7 +16,7 @@ import 'app_routes.dart';
 
 class AppPages {
   static Map<String, WidgetBuilder> routes = {
-    AppRoutes.start: (_) => const StartPage(),
+    //AppRoutes.start: (_) => const StartPage(),
     AppRoutes.welcome: (_) => const WelcomePage(),
     AppRoutes.authChoice: (_) => const AuthChoicePage(),
     AppRoutes.login: (_) => const LoginPage(),

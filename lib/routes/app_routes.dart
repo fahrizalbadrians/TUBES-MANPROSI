@@ -1,5 +1,4 @@
 class AppRoutes {
-  static const String start = '/start';
   static const String welcome = '/welcome';
   static const String login = '/login';
   static const String register = '/register';
