@@ -30,33 +30,60 @@ class RegisterPage extends StatelessWidget {
                 style: TextStyle(color: Colors.black54),
               ),
               const SizedBox(height: 25),
+
               textField("Email"),
               const SizedBox(height: 15),
               textField("Password", obscure: true),
               const SizedBox(height: 15),
               textField("Konfirmasi Password", obscure: true),
               const SizedBox(height: 20),
+
               SizedBox(
                 width: double.infinity,
                 height: 50,
                 child: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xFF0A8F62),
+                    foregroundColor: Colors.white,
                   ),
                   onPressed: () {
                     Navigator.pushReplacementNamed(context, AppRoutes.home);
                   },
-                  child: const Text("Buat Akun"),
+                  child: const Text(
+                    "Buat Akun",
+                    style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 ),
               ),
-              const SizedBox(height: 10),
-              Center(
-                child: TextButton(
-                  onPressed: () {
-                    Navigator.pushReplacementNamed(context, AppRoutes.login);
-                  },
-                  child: const Text("Sudah punya akun? Masuk"),
-                ),
+
+              const SizedBox(height: 16),
+
+              /// 🔹 TEKS "SUDAH PUNYA AKUN? MASUK"
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const Text(
+                    "Sudah punya akun? ",
+                    style: TextStyle(color: Colors.black54),
+                  ),
+                  TextButton(
+                    style: TextButton.styleFrom(
+                      padding: EdgeInsets.zero,
+                      minimumSize: Size.zero,
+                      tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                    ),
+                    onPressed: () {
+                      Navigator.pushReplacementNamed(context, AppRoutes.login);
+                    },
+                    child: const Text(
+                      "Masuk",
+                      style: TextStyle(
+                        color: Color(0xFF0A8F62),
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

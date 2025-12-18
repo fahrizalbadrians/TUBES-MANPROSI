@@ -35,11 +35,18 @@ class AuthChoicePage extends StatelessWidget {
               child: ElevatedButton(
                 style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0xFF0A8F62),
+                  foregroundColor: Colors.white, // ✅ teks putih
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
                 ),
                 onPressed: () {
                   Navigator.pushNamed(context, AppRoutes.login);
                 },
-                child: const Text("Masuk"),
+                child: const Text(
+                  "Masuk",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
               ),
             ),
 
@@ -49,14 +56,22 @@ class AuthChoicePage extends StatelessWidget {
               width: double.infinity,
               height: 50,
               child: OutlinedButton(
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: const Color(0xFF0A8F62), // ✅ teks hijau
+                  side: const BorderSide(color: Color(0xFF0A8F62)),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(12),
+                  ),
+                ),
                 onPressed: () {
                   Navigator.pushNamed(context, AppRoutes.register);
                 },
-                child: const Text("Daftar"),
+                child: const Text(
+                  "Daftar",
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                ),
               ),
             ),
-
-            const SizedBox(height: 30),
           ],
         ),
       ),

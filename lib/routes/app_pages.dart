@@ -4,7 +4,7 @@ import '../pages/welcome_page.dart';
 import '../pages/login_page.dart';
 import '../pages/register_page.dart';
 //import '../pages/forgot_password_page.dart';
-//import '../pages/home_page.dart';
+import '../pages/homepage.dart';
 import '../pages/profile_page.dart';
 import '../pages/edit_profile_page.dart';
 import '../pages/notification_page.dart';
@@ -22,7 +22,7 @@ class AppPages {
     AppRoutes.login: (_) => const LoginPage(),
     AppRoutes.register: (_) => const RegisterPage(),
     //AppRoutes.forgot: (_) => const ForgotPasswordPage(),
-    //AppRoutes.home: (_) => const HomePage(),
+    AppRoutes.home: (_) => const HomePage(),
     AppRoutes.profile: (_) => const ProfilePage(),
     AppRoutes.editProfile: (_) => const EditProfilePage(),
     AppRoutes.notification: (_) => const NotificationPage(),
